@@ -252,8 +252,6 @@ button:hover {
   animation-range: entry 0% cover 20%;
 }
 
-/* project */
-
 .project {
   display: flex;
   flex-direction: column;
@@ -336,23 +334,22 @@ button:hover {
 .project-image img,
 .project-image2 img {
   max-width: 100%;
-  /* Reduced max-width */
+
   max-height: 100%;
-  /* Reduced max-height */
+
   object-fit: fill;
-  /* Changed to contain to fit within the reduced space */
+
   position: relative;
   display: block;
 }
 
-/* Responsive Styles for 768px and larger screens */
 @media (min-width: 768px) {
   nav ul {
-    justify-content: center; /* Center navigation on larger screens */
+    justify-content: center;
   }
 
   nav ul li {
-    margin-right: 30px; /* Increase spacing between nav items */
+    margin-right: 30px;
   }
 
   article {
@@ -393,15 +390,15 @@ button:hover {
     width: 70%;
     margin-top: 20px;
     margin-right: 40px;
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    gap: 10px; /* Add spacing between grid items */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
   }
 
   .techIcon img {
-    width: 80px; /* Adjust image size */
-    height: 80px; /* Adjust image size */
-    margin-top: 20px; /* Adjust margin */
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
     overflow: hidden;
   }
 
@@ -492,4 +489,14 @@ button:hover {
   .project-content {
     flex: 1.5;
   }
+}
+.footer {
+  background-color: var(--backgroundcolor);
+  color: var(--textcolor);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
 }
