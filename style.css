@@ -190,7 +190,6 @@ button:hover {
   width: 400px;
   display: flex;
   justify-content: space-around;
-
   flex-wrap: wrap;
 }
 
@@ -205,10 +204,12 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(60, 79, 121, 0.4);
-  -webkit-backdrop-filter: blur(26px);
-  backdrop-filter: blur(26px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(173, 216, 230, 0.15); /* Slightly more transparent for liquid glass effect */
+  backdrop-filter: blur(12px); /* Enhanced blur for glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(173, 216, 230, 0.4); /* Softer, more reflective border */
+  border-radius: 10px; /* Rounded corners for smoother look */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .percentage {
@@ -223,16 +224,14 @@ button:hover {
 }
 
 .techIcon:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px) scale(1.05); /* Slightly more pronounced lift */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Deeper shadow for depth */
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(0, 0, 0, 0.1)
+    rgba(173, 216, 230, 0.25), /* Gradient for fluid effect */
+    rgba(255, 255, 255, 0.1)
   );
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
-    border 0.3s ease-in-out, background 0.3s ease-in-out;
+  border: 1px solid rgba(173, 216, 230, 0.6); /* Brighter border on hover */
 }
 
 @keyframes appear {
@@ -272,16 +271,29 @@ button:hover {
 }
 
 .project-card {
-  background: rgba(60, 79, 121, 0.4);
-  backdrop-filter: blur(26px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(173, 216, 230, 0.15); /* Light, translucent blue for liquid glass */
+  backdrop-filter: blur(12px); /* Stronger blur for glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(173, 216, 230, 0.4); /* Reflective border */
   width: 90%;
   max-width: 600px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px; /* Softer, rounded edges */
   display: flex;
   overflow: hidden;
   margin: 20px auto;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  background: linear-gradient(
+    135deg,
+    rgba(173, 216, 230, 0.25),
+    rgba(255, 255, 255, 0.15)
+  ); /* Gradient for fluid, reflective effect */
 }
 
 .project-content {
@@ -328,17 +340,14 @@ button:hover {
   align-items: flex-end;
   overflow: hidden;
   position: relative;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 12px 12px 0; /* Match card's rounded corners */
 }
 
 .project-image img,
 .project-image2 img {
   max-width: 100%;
-
   max-height: 100%;
-
   object-fit: fill;
-
   position: relative;
   display: block;
 }
@@ -417,10 +426,9 @@ button:hover {
   }
 }
 
-/* Responsive Styles for 992px and larger screens */
 @media (min-width: 992px) {
   nav ul li {
-    margin-right: 40px; /* Further increase nav item spacing */
+    margin-right: 40px;
   }
 
   article {
@@ -478,7 +486,7 @@ button:hover {
 
   .project-card {
     max-width: 800px;
-    flex-direction: row; /* Make project cards row-based */
+    flex-direction: row;
   }
 
   .project-image,
@@ -490,6 +498,7 @@ button:hover {
     flex: 1.5;
   }
 }
+
 .footer {
   background-color: var(--backgroundcolor);
   color: var(--textcolor);
@@ -499,4 +508,542 @@ button:hover {
   bottom: 0;
   width: 100%;
   margin-top: 50px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.footer a {
+  color: var(--styletext);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --backgroundcolor: rgb(20, 33, 61);
+  --textcolor: #ffffff;
+  --styletext: #fca311;
+}
+
+body {
+  background: var(--backgroundcolor);
+}
+
+.home_container {
+  height: 100vh;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--backgroundcolor);
+  padding: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul {
+  margin-top: 10px;
+  display: flex;
+}
+
+li {
+  margin-right: 20px;
+  list-style: none;
+}
+
+a {
+  font-size: 17px;
+  color: var(--textcolor);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--styletext);
+  text-decoration: underline 3px;
+}
+
+article {
+  margin: 90px 0 0 50px;
+}
+
+.sayHello {
+  color: var(--textcolor);
+}
+
+.selfInfo {
+  color: var(--textcolor);
+  font-size: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(18, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+span {
+  color: var(--styletext);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 21.5ch;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fca311;
+  }
+}
+
+.selfInfo1 {
+  color: var(--textcolor);
+  font-size: 40px;
+}
+
+.subInfo {
+  font-style: italic;
+  font-size: 16px;
+  color: var(--textcolor);
+}
+
+.icon {
+  margin-top: 30px;
+  display: flex;
+}
+
+.icon_items img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 50px;
+  border-radius: 20px;
+  border: 2px solid orange;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+  z-index: 0;
+  color: orange;
+}
+
+button::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(20deg);
+  background: rgb(255, 165, 0);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 105%;
+}
+
+button:hover {
+  color: #4a4747;
+}
+
+.about_container {
+  display: flex;
+}
+
+.aboutInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--textcolor);
+  margin-top: 80px;
+}
+
+.subAboutInfo {
+  text-align: center;
+  margin: 30px 30px 0 30px;
+  word-wrap: break-word;
+}
+
+.techSkill {
+  margin-top: 30px;
+}
+
+.techSkill h3 {
+  color: var(--styletext);
+  margin-top: 30px;
+}
+
+.techCard {
+  margin-top: 30px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.techIcon img {
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.techIcon {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(173, 216, 230, 0.15); /* Slightly more transparent for liquid glass effect */
+  backdrop-filter: blur(12px); /* Enhanced blur for glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(173, 216, 230, 0.4); /* Softer, more reflective border */
+  border-radius: 10px; /* Rounded corners for smoother look */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.percentage {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.percentage i {
+  font-size: 0.75rem;
+  margin-right: 2px;
+}
+
+.techIcon:hover {
+  transform: translateY(-5px) scale(1.05); /* Slightly more pronounced lift */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Deeper shadow for depth */
+  background: linear-gradient(
+    135deg,
+    rgba(173, 216, 230, 0.25), /* Gradient for fluid effect */
+    rgba(255, 255, 255, 0.1)
+  );
+  border: 1px solid rgba(173, 216, 230, 0.6); /* Brighter border on hover */
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.a {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.project_info {
+  margin-top: 150px;
+  color: var(--textcolor);
+}
+
+.project_supInfo {
+  color: var(--textcolor);
+  text-align: center;
+  margin: 35px 40px 35px 40px;
+  word-wrap: break-word;
+}
+
+.project-card {
+  background: rgba(173, 216, 230, 0.15); /* Light, translucent blue for liquid glass */
+  backdrop-filter: blur(12px); /* Stronger blur for glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(173, 216, 230, 0.4); /* Reflective border */
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px; /* Softer, rounded edges */
+  display: flex;
+  overflow: hidden;
+  margin: 20px auto;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  background: linear-gradient(
+    135deg,
+    rgba(173, 216, 230, 0.25),
+    rgba(255, 255, 255, 0.15)
+  ); /* Gradient for fluid, reflective effect */
+}
+
+.project-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  color: white;
+}
+
+.project-title {
+  font-size: 2em;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.project-description {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.project-links {
+  margin-top: auto;
+  text-align: left;
+}
+
+.github-link img {
+  width: 30px;
+}
+
+.github-link img:hover {
+  transform: scale(1.15) rotate(10deg);
+}
+
+.project-image,
+.project-image2 {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0 12px 12px 0; /* Match card's rounded corners */
+}
+
+.project-image img,
+.project-image2 img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
+  position: relative;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin-right: 30px;
+  }
+
+  article {
+    margin-left: 100px;
+    margin-top: 120px;
+  }
+  .about_container {
+    width: 100%;
+  }
+  .selfInfo {
+    font-size: 40px;
+  }
+
+  .selfInfo1 {
+    font-size: 50px;
+  }
+
+  .subInfo {
+    font-size: 18px;
+  }
+  .aboutInfo {
+    font-size: 15px;
+    margin-top: 100px;
+  }
+
+  .subAboutInfo {
+    font-size: 17px;
+    margin: 40px 60px 0 60px;
+  }
+
+  .project_info {
+    margin-top: 100px;
+  }
+  .project_supInfo {
+    font-size: 18px;
+  }
+  .techCard {
+    width: 70%;
+    margin-top: 20px;
+    margin-right: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .techIcon img {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .techIcon {
+    width: 100%;
+    padding: 15px;
+  }
+  .project_supInfo {
+    width: 550px;
+    text-wrap: wrap;
+    margin: 40px 80px 40px 80px;
+  }
+
+  .project-card {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  nav ul li {
+    margin-right: 40px;
+  }
+
+  article {
+    margin-left: 150px;
+    margin-top: 150px;
+  }
+
+  .selfInfo {
+    font-size: 50px;
+  }
+
+  .selfInfo1 {
+    font-size: 60px;
+  }
+
+  .subInfo {
+    font-size: 20px;
+  }
+  .subAboutInfo {
+    width: 60%;
+    word-break: keep-all;
+    font-size: 18px;
+    margin: 50px 100px 0 100px;
+  }
+  .about_container {
+    padding: 0 50px;
+  }
+  .techCard {
+    width: 50%;
+    margin-top: 20px;
+    margin-right: px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .techIcon {
+    width: 100%;
+    padding: 15px;
+  }
+  .aboutInfo {
+    margin-top: 120px;
+  }
+
+  .subAboutInfo {
+    margin: 50px 100px 0 100px;
+  }
+
+  .project_info {
+    margin-top: 100px;
+  }
+
+  .project_supInfo {
+    margin: 50px 120px 50px 120px;
+  }
+
+  .project-card {
+    max-width: 800px;
+    flex-direction: row;
+  }
+
+  .project-image,
+  .project-image2 {
+    flex: 1;
+  }
+
+  .project-content {
+    flex: 1.5;
+  }
+}
+
+.footer {
+  background-color: var(--backgroundcolor);
+  color: var(--textcolor);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.footer a {
+  color: var(--styletext);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
