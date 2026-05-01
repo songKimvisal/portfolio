@@ -1,476 +1,433 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Song Kimvisal | Portfolio</title>
+    <title>Song Kimvisal — Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
   </head>
   <body>
-    <div class="container">
-      <!-- Left Column -->
-      <div class="left-column">
-        <!-- Profile Card -->
-        <div class="card profile-card">
-          <div class="profile-image">
-            <img
-              src="assets/pr/profile.png"
-              alt="Song Kimvisal"
-              class="profile-img"
-            />
-          </div>
-          <h2 class="profile-name">SONG KIMVISAL</h2>
-          <p class="profile-title">Software Engineering Student</p>
-          <a
-            href="assets/cv/Resume.pdf"
-            download="Resume.pdf"
-            class="cv-download-btn"
-          >
-            <i class="fas fa-download"></i>
-            Download CV
-          </a>
-          <a
-            href="assets/cv/Resume.pdf"
-            target="_blank"
-            class="cv-download-btn"
-          >
-            <i class="fas fa-eye"></i>
-            View CV
-          </a>
-        </div>
+    <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" fill="currentColor">
+        <path
+          d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+        />
+      </svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" fill="currentColor">
+        <path
+          fill-rule="evenodd"
+          d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </button>
 
-        <!-- About Card -->
-        <div class="card about-card">
-          <div class="card-header">
-            <i class="fas fa-user-circle"></i>
-            <h3>About Me</h3>
-          </div>
-          <p class="about-text">
-            Four-year Software Engineering student at Limkokwing University,
-            specializing in Multimedia. Passionate about blending technology
-            with creative design to build user-focused solutions.
+    <main class="grid">
+      <!-- ① PROFILE + ABOUT merged -->
+      <div class="card card-profile">
+        <div class="profile-photo-col">
+        </div>
+        <div class="profile-copy">
+          <span class="eyebrow">Hey, I'm</span>
+          <h1 class="name">Song <em>Kimvisal</em></h1>
+          <p class="role">
+            <span class="role-dot"></span>Software Engineer &amp; Developer
           </p>
-        </div>
-
-        <!-- Education Card -->
-        <div class="card education-card">
-          <div class="card-header">
-            <i class="fas fa-graduation-cap"></i>
-            <h3>Education</h3>
+          <p class="bio">
+            Fourth-year SE student at <strong>Limkokwing University</strong>. I
+            build full-stack products, mobile apps, and interfaces people
+            actually enjoy using.
+          </p>
+          <div class="profile-tags">
+            <span class="atag">🎓 SE Student</span>
+            <span class="atag">📱 Mobile Dev</span>
+            <span class="atag">🌐 Full-Stack</span>
+            <span class="atag">🇰🇭 Phnom Penh</span>
           </div>
-          <div class="education-item">
-            <div class="edu-year">2022 - Present</div>
-            <h4>Software Engineering</h4>
-            <p>Limkokwing University</p>
-            <p class="edu-detail">
-              Phnom Penh, Cambodia Bachelor of Science in Software Engineering
-              with Multimedia
-            </p>
-          </div>
-        </div>
-
-        <!-- Contact Card -->
-        <div class="card contact-card">
-          <div class="card-header">
-            <i class="fas fa-address-card"></i>
-            <h3>Contact</h3>
-          </div>
-          <div class="contact-links">
-            <a
-              href="https://t.me/T4ngerineee"
-              target="_blank"
-              class="contact-item"
-            >
-              <i class="fab fa-telegram"></i>
-              <span>Telegram</span>
+          <div class="profile-actions">
+            <a href="assets/cv/Resume.pdf" target="_blank" class="cv-link">
+              <i class="fas fa-download"></i> Download CV
             </a>
-            <a
-              href="https://github.com/songKimvisal"
-              target="_blank"
-              class="contact-item"
-            >
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/song-kimvisal"
-              target="_blank"
-              class="contact-item"
-            >
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
+            <div class="open-badge">
+              <span class="open-dot"></span> Open to work
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Right Column -->
-      <div class="right-column">
-        <!-- Skills Card -->
-        <div class="card skills-card">
-          <div class="card-header">
-            <i class="fas fa-code"></i>
-            <h3>Technical Skills</h3>
+      <!-- ② SOCIAL — redesigned with handles + YouTube -->
+      <div class="card card-social">
+        <p class="label">Find me on</p>
+        <nav class="soc-list">
+          <a
+            href="https://t.me/T4ngerineee"
+            target="_blank"
+            class="soc-row soc-tg"
+          >
+            <span class="soc-ic"><i class="fab fa-telegram"></i></span>
+            <span class="soc-info">
+              <span class="soc-name">Telegram</span>
+              <span class="soc-handle">@T4ngerineee</span>
+            </span>
+            <i class="fas fa-arrow-up-right soc-arr"></i>
+          </a>
+          <a
+            href="https://github.com/songKimvisal"
+            target="_blank"
+            class="soc-row soc-gh"
+          >
+            <span class="soc-ic"><i class="fab fa-github"></i></span>
+            <span class="soc-info">
+              <span class="soc-name">GitHub</span>
+              <span class="soc-handle">songKimvisal</span>
+          </a>
+          <a
+            href="https://www.youtube.com/@BatDeveloper"
+            target="_blank"
+            class="soc-row soc-yt"
+          >
+            <span class="soc-ic"><i class="fab fa-youtube"></i></span>
+            <span class="soc-info">
+              <span class="soc-name">YouTube</span>
+              <span class="soc-handle">@BatDeveloper</span>
+            </span>
+            <i class="fas fa-arrow-up-right soc-arr"></i>
+          </a>
+          <a href="mailto:contact@example.com" class="soc-row soc-em">
+            <span class="soc-ic"><i class="fas fa-envelope"></i></span>
+            <span class="soc-info">
+              <span class="soc-name">Email</span>
+              <span class="soc-handle">songkimvisal21@gmail.com</span>
+            </span>
+            <i class="fas fa-arrow-up-right soc-arr"></i>
+          </a>
+        </nav>
+      </div>
+
+      <!-- ③ FEATURED PROJECTS — full width, horizontal scroll on mobile -->
+      <div class="card card-projects">
+        <header class="card-head">
+          <h2 class="section-title">Featured Projects</h2>
+          <a
+            href="https://github.com/songKimvisal"
+            target="_blank"
+            class="see-all"
+          >
+            All repos <i class="fab fa-github"></i>
+          </a>
+        </header>
+        <div class="proj-track">
+          <a
+            class="pcard"
+            href="https://github.com/songKimvisal/Happy_Khmer_New_year"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="pcard-img">
+              <img src="assets/cards/kyn.png" alt="Khmer New Year" />
+              <div class="pcard-img-fb"><i class="fas fa-globe"></i></div>
+              <div class="pcard-img-overlay"></div>
+              <span class="pcard-badge">Web</span>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-top">
+                <span class="pcard-num">01</span>
+                <span class="pcard-gh-label"
+                  ><i class="fab fa-github"></i> GitHub</span
+                >
+              </div>
+              <h3 class="pcard-title">Khmer New Year Website</h3>
+              <p class="pcard-desc">
+                A vibrant cultural site celebrating Khmer New Year with
+                interactive traditions and animations.
+              </p>
+              <div class="pcard-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="pcard"
+            href="https://github.com/songKimvisal/elevator"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="pcard-img">
+              <img src="assets/cards/elevator.png" alt="Elevator Simulation" />
+              <div class="pcard-img-fb">
+                <i class="fas fa-building-elevator"></i>
+              </div>
+              <div class="pcard-img-overlay"></div>
+              <span class="pcard-badge">web</span>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-top">
+                <span class="pcard-num">02</span>
+                <span class="pcard-gh-label"
+                  ><i class="fab fa-github"></i> GitHub</span
+                >
+              </div>
+              <h3 class="pcard-title">Elevator Simulation</h3>
+              <p class="pcard-desc">
+                Real-time elevator control system with floor scheduling and
+                intelligent queue management.
+              </p>
+              <div class="pcard-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="pcard"
+            href="https://github.com/songKimvisal/SabayTalk"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="pcard-img">
+              <img src="assets/cards/sabayTalk.png" alt="SabayTalk" />
+              <div class="pcard-img-fb"><i class="fas fa-comments"></i></div>
+              <div class="pcard-img-overlay"></div>
+              <span class="pcard-badge">Console</span>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-top">
+                <span class="pcard-num">03</span>
+                <span class="pcard-gh-label"
+                  ><i class="fab fa-github"></i> GitHub</span
+                >
+              </div>
+              <h3 class="pcard-title">SabayTalk App</h3>
+              <p class="pcard-desc">
+                Console-based messaging application developed using C++ and Object-Oriented Programming principles for final-term project.
+              </p>
+              <div class="pcard-stack">
+                <span>C++</span><span>OOP</span><span>Console</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="pcard"
+            href="https://github.com/songKimvisal/Mobile_App_Final"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="pcard-img">
+              <img src="assets/cards/Mobile App final .png" alt="Mobile App Final" />
+              <div class="pcard-img-fb"><i class="fas fa-mobile-alt"></i></div>
+              <div class="pcard-img-overlay"></div>
+              <span class="pcard-badge">Mobile</span>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-top">
+                <span class="pcard-num">05</span>
+                <span class="pcard-gh-label"
+                  ><i class="fab fa-github"></i> GitHub</span
+                >
+              </div>
+              <h3 class="pcard-title">Mobile App Final</h3>
+              <p class="pcard-desc">
+                A polished mobile solution with responsive layouts, animations, and real-world UX interactions for users on the go.
+              </p>
+              <div class="pcard-stack">
+                <span>Flutter</span><span>NodeJs</span><span>ExpressJs</span><span>Prisma</span><span>PostgreSQL</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- ④ WHAT I DO — moved to where about was -->
+      <div class="card card-services">
+        <h2 class="section-title">What I Do</h2>
+        <div class="service-list">
+          <div class="service-item">
+            <span class="s-num">01</span
+            ><span class="s-name">Web Development</span>
           </div>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <img src="assets/icons/cpp.svg" alt="C++" />
-              <span>C++</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
+          <div class="service-item">
+            <span class="s-num">02</span><span class="s-name">Mobile Apps</span>
+          </div>
+          <div class="service-item">
+            <span class="s-num">03</span
+            ><span class="s-name">UI / UX Design</span>
+          </div>
+          <div class="service-item">
+            <span class="s-num">04</span
+            ><span class="s-name">Backend &amp; APIs</span>
+          </div>
+          <div class="service-item">
+            <span class="s-num">05</span
+            ><span class="s-name">Database Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ⑤ TECH STACK — expanded -->
+      <div class="card card-skills">
+        <h2 class="section-title">Tech Stack</h2>
+
+        <div class="stack-group">
+          <p class="stack-label">🖥️ Languages</p>
+          <div class="stack-row">
+            <div class="tech-pill tp-js">
+              <i class="devicon-javascript-plain"></i><span>JavaScript</span>
             </div>
-            <div class="skill-item">
-              <img src="assets/icons/html.svg" alt="HTML" />
-              <span>HTML</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
+            <div class="tech-pill tp-dart">
+              <i class="devicon-dart-plain"></i><span>Dart</span>
             </div>
-            <div class="skill-item">
-              <img src="assets/icons/css.svg" alt="CSS" />
-              <span>CSS</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
+            <div class="tech-pill tp-py">
+              <i class="devicon-python-plain"></i><span>Python</span>
             </div>
-            <div class="skill-item">
-              <img src="assets/icons/javascript.svg" alt="JavaScript" />
-              <span>JavaScript</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
+            <div class="tech-pill tp-java">
+              <i class="devicon-java-plain"></i><span>Java</span>
             </div>
-            <div class="skill-item">
-              <img src="assets/icons/python.svg" alt="Python" />
-              <span>Python</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
+            <div class="tech-pill tp-html">
+              <i class="devicon-html5-plain"></i><span>HTML5</span>
             </div>
-            <div class="skill-item">
-              <img
-                src="assets/icons/flutter-brands-solid-full.svg"
-                alt="Flutter"
-              />
-              <span>Flutter</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
+            <div class="tech-pill tp-css">
+              <i class="devicon-css3-plain"></i><span>CSS3</span>
             </div>
-            <div class="skill-item">
-              <img src="assets/icons/react-native-1.svg" alt="Flutter" />
-              <span>React Native</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img src="assets/icons/expo-go-app.svg" alt="Flutter" />
-              <span>Expo Go</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="assets/icons/express-109.svg"
-                alt="ExpressJs"
-                style="filter: invert(1); transform: scale(1.2)"
-              />
-              <span>ExpressJs</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img src="assets/icons/dart.svg" alt="Dart" />
-              <span>Dart</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img src="assets/icons/firebase-1.svg" alt="Firebase" />
-              <span>Firebase</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img src="assets/icons/mongodb.svg" alt="Firebase" />
-              <span>MongoDB</span>
-              <div class="skill-level">
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle filled"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
+            <div class="tech-pill tp-cpp">
+              <i class="devicon-cplusplus-plain"></i><span>C++</span>
             </div>
           </div>
         </div>
 
-        <!-- Design Tools Card -->
-        <div class="card tools-card">
-          <div class="card-header">
-            <i class="fas fa-palette"></i>
-            <h3>Design & Development Tools</h3>
-          </div>
-          <div class="tools-grid">
-            <div class="tool-badge">
-              <img src="assets/icons/adobe-photoshop-2.svg" alt="Photoshop" />
-              <span>Photoshop</span>
+        <div class="stack-group">
+          <p class="stack-label">🚀 Frameworks &amp; Runtimes</p>
+          <div class="stack-row">
+            <div class="tech-pill tp-flutter">
+              <i class="devicon-flutter-plain "></i><span>Flutter</span>
             </div>
-            <div class="tool-badge">
-              <img src="assets/icons/adobe-illustrator.svg" alt="Illustrator" />
-              <span>Illustrator</span>
+            <div class="tech-pill tp-react">
+              <i class="devicon-react-original"></i
+              ><span>React Native</span>
             </div>
-            <div class="tool-badge">
-              <img src="assets/icons/adobe-indesign.svg" alt="InDesign" />
-              <span>InDesign</span>
+            <div class="tech-pill tp-node">
+              <i class="devicon-nodejs-plain"></i><span>Node.js</span>
             </div>
-            <div class="tool-badge">
-              <img src="assets/icons/premiere-pro-cc.svg" alt="Premiere Pro" />
-              <span>Premiere</span>
+            <div class="tech-pill tp-express">
+              <i class="devicon-express-original di-muted"></i
+              ><span>Express.js</span>
             </div>
-            <div class="tool-badge">
-              <img src="assets/icons/figma-icon.svg" alt="Figma" />
-              <span>Figma</span>
-            </div>
-            <div class="tool-badge">
-              <img
-                src="assets/icons/github.svg"
-                alt="GitHub"
-                style="background: #fff; border-radius: 50%; padding: 5px"
-              />
-              <span>GitHub</span>
-            </div>
-            <div class="tool-badge">
-              <img
-                src="assets/icons/git.svg"
-                alt="Git"
-                style="background: #fff; border-radius: 8px; padding: 5px"
-              />
-              <span>Git</span>
-            </div>
-            <div class="tool-badge">
-              <img
-                src="assets/icons/android-studio-icon.svg"
-                alt="Android Studio"
-              />
-              <span>Android Studio</span>
-            </div>
-            <div class="tool-badge">
-              <img src="assets/icons/intellij-idea-1.svg" alt="IntelliJ" />
-              <span>IntelliJ</span>
-            </div>
-            <div class="tool-badge">
-              <img
-                src="assets/icons/mysql-logo-pure.svg"
-                alt="MySQL"
-                style="background: #fff; border-radius: 8px; padding: 5px"
-              />
-              <span>MySQL</span>
-            </div>
-            <div class="tool-badge">
-              <img
-                src="assets/icons/sqlite.svg"
-                alt="SQLite"
-                style="background: #fff; border-radius: 8px; padding: 5px"
-              />
-              <span>SQLite</span>
+            <div class="tech-pill tp-firebase">
+              <i class="devicon-firebase-plain"></i
+              ><span>Firebase</span>
             </div>
           </div>
         </div>
 
-        <!-- Projects Card -->
-        <div class="card projects-card">
-          <div class="card-header">
-            <i class="fas fa-folder-open"></i>
-            <h3>Featured Projects</h3>
+        <div class="stack-group">
+          <p class="stack-label">🗄️ Databases &amp; Cloud</p>
+          <div class="stack-row">
+            <div class="tech-pill tp-mongo">
+              <i class="devicon-mongodb-plain "></i><span>MongoDB</span>
+            </div>
+            <div class="tech-pill tp-mysql">
+              <i class="devicon-mysql-plain "></i><span>MySQL</span>
+            </div>
+            <div class="tech-pill tp-firebase2">
+              <i class="devicon-firebase-plain "></i
+              ><span>Firebase</span>
+            </div>
+            <div class="tech-pill tp-gcp">
+              <i class="devicon-googlecloud-plain "></i
+              ><span>Google Cloud</span>
+            </div>
           </div>
+        </div>
 
-          <div class="project-item">
-            <div class="project-content">
-              <div class="project-header">
-                <h4>Khmer New Year Website</h4>
-                <span class="project-year">2024</span>
-              </div>
-              <p class="project-description">
-                Interactive website celebrating Khmer New Year, built with HTML,
-                CSS, and JavaScript featuring custom animations and cultural
-                elements.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-                <span class="tech-tag">JavaScript</span>
-              </div>
-              <a
-                href="https://github.com/songKimvisal/Happy_Khmer_New_year"
-                target="_blank"
-                class="project-link"
-              >
-                <i class="fab fa-github"></i>
-                View on GitHub
-              </a>
+        <div class="stack-group">
+          <p class="stack-label">🛠️ Tools</p>
+          <div class="stack-row">
+            <div class="tech-pill tp-git">
+              <i class="devicon-git-plain"></i><span>Git</span>
             </div>
-            <div class="project-image">
-              <img src="assets/cards/kyn.png" alt="Khmer New Year Project" />
+            <div class="tech-pill tp-github">
+              <i class="devicon-github-original di-muted"></i
+              ><span>GitHub</span>
+            </div>
+            <div class="tech-pill tp-docker">
+              <i class="devicon-docker-plain"></i><span>Docker</span>
+            </div>
+            <div class="tech-pill tp-postman">
+              <i class="devicon-postman-plain"></i><span>Postman</span>
+            </div>
+            <div class="tech-pill tp-vscode">
+              <i class="devicon-vscode-plain"></i><span>VS Code</span>
             </div>
           </div>
+        </div>
 
-          <div class="project-item">
-            <div class="project-content">
-              <div class="project-header">
-                <h4>Elevator System Simulation</h4>
-                <span class="project-year">2024</span>
-              </div>
-              <p class="project-description">
-                Mid-term group project simulating an elevator system with floor
-                selection, direction indicators, and queue management.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-                <span class="tech-tag">JavaScript</span>
-              </div>
-              <a
-                href="https://github.com/songKimvisal/elevator"
-                target="_blank"
-                class="project-link"
-              >
-                <i class="fab fa-github"></i>
-                View on GitHub
-              </a>
+        <div class="stack-group">
+          <p class="stack-label">🎨 Design</p>
+          <div class="stack-row">
+            <div class="tech-pill tp-figma">
+              <i class="devicon-figma-plain"></i><span>Figma</span>
             </div>
-            <div class="project-image">
-              <img
-                src="assets/cards/elevator.png"
-                alt="Elevator System Project"
-              />
+            <div class="tech-pill tp-canva">
+              <i class="devicon-canva-original"></i><span>Canva</span>
             </div>
-          </div>
-
-          <div class="project-item">
-            <div class="project-content">
-              <div class="project-header">
-                <h4>SabayTalk App</h4>
-                <span class="project-year">2024</span>
-              </div>
-              <p class="project-description">
-                Console-based messaging application developed using C++ and
-                Object-Oriented Programming principles for final-term project.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">OOP</span>
-                <span class="tech-tag">Console</span>
-              </div>
-              <a
-                href="https://github.com/songKimvisal/SabayTalk"
-                target="_blank"
-                class="project-link"
-              >
-                <i class="fab fa-github"></i>
-                View on GitHub
-              </a>
+            <div class="tech-pill tp-ai">
+              <i class="devicon-illustrator-plain"></i
+              ><span>Illustrator</span>
             </div>
-            <div class="project-image">
-              <img src="assets/cards/sabayTalk.png" alt="SabayTalk Project" />
-            </div>
-          </div>
-          <div class="project-item">
-            <div class="project-content">
-              <div class="project-header">
-                <h4>SabayBook App</h4>
-                <span class="project-year">2025</span>
-              </div>
-              <p class="project-description">
-                A simple movie booking application made with Flutter and NodeJs
-                + ExpressJs
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">NodeJs</span>
-                <span class="tech-tag">ExpressJs</span>
-                <span class="tech-tag">Prisma</span>
-                <span class="tech-tag">PostgreSQL</span>
-              </div>
-              <a
-                href="https://github.com/Sithi-sak/movie-booking-monorepo"
-                target="_blank"
-                class="project-link"
-              >
-                <i class="fab fa-github"></i>
-                View on GitHub
-              </a>
-            </div>
-            <div class="project-image">
-              <img
-                src="assets/cards/Mobile App final .png"
-                alt="movie-booking Project"
-              />
+            <div class="tech-pill tp-ps">
+              <i class="devicon-photoshop-plain"></i
+              ><span>Photoshop</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <footer class="footer">
-      <p>© 2025 Song Kimvisal. All rights reserved.</p>
+      <!-- ⑥ CTA -->
+      <div class="card card-cta">
+        <p class="cta-eyebrow">Looking for a developer?</p>
+        <h2 class="cta-title">Hire me for<br /><em>your next project.</em></h2>
+        <p class="cta-copy">If you liked my work, let’s connect — I’m available for freelance, contract, and full-time roles.</p>
+        <a href="https://t.me/T4ngerineee" target="_blank" class="cta-btn">
+          Message me on Telegram
+          <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <!-- ⑦ EDUCATION -->
+      <div class="card card-edu">
+        <h2 class="section-title">Education</h2>
+        <div class="edu-row">
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div>
+            <p class="edu-deg">Software Engineering</p>
+            <p class="edu-uni">Limkokwing University</p>
+            <span class="edu-tag">2022 – Present</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <span>© 2025 Song Kimvisal</span>
+      <span class="foot-sep">·</span>
+      <span>Crafted from scratch</span>
     </footer>
 
     <script src="click.js"></script>
