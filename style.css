@@ -619,6 +619,29 @@ body {
   gap: 12px;
 }
 
+.proj-group-title {
+  grid-column: 1 / -1;
+  font-family: "Inter", sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 -2px;
+}
+.proj-group-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.proj-group-title:first-child {
+  margin-top: 0;
+}
+
 /* project card */
 .pcard {
   display: flex;
