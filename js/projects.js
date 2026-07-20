@@ -48,6 +48,18 @@ const PROJECTS = [
     stack: ["Expo", "React Native", "Supabase", "Clerk", "Stripe"],
   },
   {
+    group: "App",
+    kind: "github",
+    href: "https://github.com/songKimvisal/",
+    img: "assets/cards/MOT.png",
+    alt: "HRMIS-MOT-MOB",
+    fallbackIcon: "fas fa-contact-card",
+    badge: "Mobile",
+    title: "HRMIS-MOT-MOB",
+    desc: "Human Resource Management Information System Mobile App for Ministry of Tourism",
+    stack: ["flutter"],
+  },
+  {
     group: "Prototype",
     kind: "figma",
     href: "https://www.figma.com/proto/xGnHqv3mpbMmPFIb28eWKy/PhsarOne?node-id=356-144&t=tA5qpkaAW3vjE4ws-1",
