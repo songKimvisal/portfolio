@@ -980,7 +980,38 @@ body {
 .tp-mongo {
   background: #13aa52;
   border-color: #13aa52;
+}/* New pills: solid background, white text + icon (same look as MongoDB) */
+.tp-csharp, .tp-reactjs, .tp-vite, .tp-tailwind, .tp-bootstrap,
+.tp-dotnet, .tp-prisma, .tp-sqlserver, .tp-postgres, .tp-supabase,
+.tp-stripe, .tp-khqr, .tp-clerk, .tp-dsa, .tp-api, .tp-test {
+  color: #fff;
+  border-color: transparent;
 }
+.tp-csharp, .tp-reactjs, .tp-vite, .tp-tailwind, .tp-bootstrap,
+.tp-dotnet, .tp-prisma, .tp-sqlserver, .tp-postgres, .tp-supabase,
+.tp-stripe, .tp-khqr, .tp-clerk, .tp-dsa, .tp-api, .tp-test {
+  box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.6);
+}
+
+.tp-csharp    { background: #68217a; }
+.tp-reactjs   { background: #61dafb; color: #0b1220; }  /* dark text: light background */
+.tp-vite      { background: #646cff; }
+.tp-tailwind  { background: #06b6d4; }
+.tp-bootstrap { background: #7952b3; }
+.tp-dotnet    { background: #512bd4; }
+.tp-prisma    { background: #0c344b; }
+.tp-sqlserver { background: #cc2927; }
+.tp-postgres  { background: #336791; }
+.tp-supabase  { background: #3ecf8e; color: #052e1c; }  /* dark text: light background */
+.tp-stripe    { background: #635bff; }
+.tp-khqr      { background: #e1232e; }
+.tp-clerk     { background: #6c47ff; }
+.tp-dsa       { background: #6366f1; }
+.tp-api       { background: #0ea5e9; }
+.tp-test      { background: #16a34a; }
+
+.tech-pill svg { width: 1.15em; height: 1.15em; flex-shrink: 0; }
+.tp-reactjs i, .tp-supabase i, .tp-reactjs svg, .tp-supabase svg { color: inherit; }
 .tp-mysql {
   background: #00758f;
   border-color: #00758f;
